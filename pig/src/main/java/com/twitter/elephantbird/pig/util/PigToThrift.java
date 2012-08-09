@@ -79,7 +79,7 @@ public class PigToThrift<T extends TBase<?, ?>> {
         try {
           tObj.setFieldValue(field.getFieldIdEnum(), toThriftValue(field, pObj));
         } catch (Exception e) {
-          String value = String.valueOf(tObj);
+          String value = String.valueOf(pObj);
           final int max_length = 100;
           if (max_length < value.length()) {
             value = value.substring(0, max_length - 3) + "...";
